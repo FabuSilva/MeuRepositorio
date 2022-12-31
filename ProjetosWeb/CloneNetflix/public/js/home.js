@@ -1,4 +1,6 @@
-fetch(geres_list_http + new URLSearchParams({
+const main = document.querySelector(".main")
+
+fetch(genres_list_http + new URLSearchParams({
     api_key: api_key
 }))
 .then(res => res.json())
@@ -9,7 +11,7 @@ fetch(geres_list_http + new URLSearchParams({
 })
 
 const fetchMovieList = (id, genres) =>{
-    fetch(geres_list_http + new URLSearchParams({
+    fetch(movie_geres_list + new URLSearchParams({
         api_key:api_key,
         with_genres:id,
         page:Math.floor(Math.random()*3)+1
@@ -21,7 +23,6 @@ const fetchMovieList = (id, genres) =>{
     .catch(err => console.log(err))
 }
 
-const main = document.querySelector(".main")
 const makeCategory = (category, data) =>{
     main.innerHTML +=`
     <div class="movie-list">
@@ -41,4 +42,32 @@ const makeCategory = (category, data) =>{
             </button>
         </div>
     `
+    makeCards(category,data) 
+}
+
+const makeCards = (id, data)=>{
+    const movieContainer = document.getElementById(id)
+  
+    data.forEach((item, i)=>{
+      if(item.backdrop_path == null){
+        item.backdrop_path = item.poster_path;
+        if(item.backdrop_path == null){
+          return
+        }
+      }
+  
+  
+      movieContainer.innerHTML += `
+      <div class="movie">
+        <img src="${img_url}${item.backdrop_path}" alt="poster">
+        <p class="movie-title">${item.title}</p>
+      </div>
+      `
+
+    if(i ==data.length -1){
+        setTimeout(() =>{
+            setupScrooling()
+        }, 100) 
+    }
+    })
 }
