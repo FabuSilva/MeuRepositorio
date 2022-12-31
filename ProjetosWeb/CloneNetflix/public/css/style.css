@@ -130,3 +130,36 @@ body{
     height: 20px;
     overflow: hidden;
 }
+
+.pre-btm,
+.next-btm{
+    position: absolute;
+    height: 200px;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 2.5vw;
+    background: #181818;
+    border: none;
+    outline: none;
+    opacity: 0.5;
+}
+
+.pre-btm:hover,
+.next-btm:hover{
+    opacity: 1;
+}
+
+.pre-btm{
+    left: -2.5vw;
+}
+
+.next-btm{
+    right: -2.5vw;
+}
+
+.pre-btm img,
+.next-btm img{
+    width: 20px;
+    height: 20px;
+    object-fit: contain;
+}
