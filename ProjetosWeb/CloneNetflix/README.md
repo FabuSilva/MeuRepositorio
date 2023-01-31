@@ -1,1 +1,2 @@
 O projeto **Clone Responsivo do Netflix** foi desenvolvido dentro do Aulão da [DIO](https://web.dio.me/home), onde foi colocado em prática: Consumo da API [The Movie Database](https://www.themoviedb.org/documentation/api), HTML, CSS, JavaScript, mostrados durante a aula.
+##### Basta escrever (node server) no terminal para executar o projeto
