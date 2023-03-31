@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-aFq/bzH65dt+w6FI2ooMVUpc+21e0SRygnTpmBvdBgSdnuTN7QbdgL+OapgHtvPp" crossorigin="anonymous">
+    <link rel="stylesheet" href="css/style.css">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha2/dist/js/bootstrap.bundle.min.js" integrity="sha384-qKXV1j0HvMUeCBQ+QVp7JcfGl760yU08IQ+GpUo5hlbpg51QRiuqHAJz8+BrxE/N" crossorigin="anonymous"></script>
+    <title>Sistema de grid</title>
+</head>
+<body>
+    <div class="container">
+        <div class="row">
+            <div class="col-3 bg-info">
+                <p>Coluna tamanho 3</p>
+            </div>
+            <div class="col-6 bg-info-subtle">
+                <p>Coluna tamanho 6</p>
+            </div>
+            <div class="col-3 bg-info">
+                <p>Coluna tamanho 3</p>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col bg-info-subtle h400">
+                <p>Tela é dividida em 12 partes</p>
+            </div>
+
+            <div class="col-9 col-3 bg-info h400">
+                <p>divida a tela usando col-(1~12) usando numeros inteiros</p>
+                <p>caso aconteça um caso como esse exemplo onde a tela esta dividida como: 1.5/9/1.5</p>
+                <p>col-1.5 não funciona</p>
+                <p>use a classe col sem nenhum numero</p>
+            </div>
+
+            <div class="col bg-info-subtle h400">
+                <p>a classe col adapta a tela para preencher os 12 restantes</p>
+            </div>
+        </div>
+    </div>
+    <script src="js/script.js"></script>
+</body>
+</html>

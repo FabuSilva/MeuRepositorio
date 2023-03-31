@@ -4,11 +4,45 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-aFq/bzH65dt+w6FI2ooMVUpc+21e0SRygnTpmBvdBgSdnuTN7QbdgL+OapgHtvPp" crossorigin="anonymous">
     <link rel="stylesheet" href="css/style.css">
-    <title>Document</title>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha2/dist/js/bootstrap.bundle.min.js" integrity="sha384-qKXV1j0HvMUeCBQ+QVp7JcfGl760yU08IQ+GpUo5hlbpg51QRiuqHAJz8+BrxE/N" crossorigin="anonymous"></script>
+    <title>Tipos de Conteiners</title>
 </head>
 <body>
-    
+
+    <div class="container bg-info">
+        <p>Essa é a div com a classe container</p>
+        <p>
+            Conteiner é a classe padrão. Ocupa 100% da tela de dispositivos muito pequenos (menor que 576 px).
+            <a href="https://getbootstrap.com/docs/5.3/layout/containers/">Link da doc dos containers</a>
+        </p>
+    </div>
+
+    <div class="container-md bg-danger">
+        <p>Essa é a div com classe container-md</p>
+        <p>container-md ocupa 100% da tela de dispositivos pequenos (De 576px até 768px)</p>
+    </div>
+
+    <div class="container-lg bg-primary">
+        <p>Essa é a div com classe container-lg</p>
+        <p>container-lg ocupa 100% da tela de dispositivos medios (De 768px até 992px)</p>
+    </div>
+
+    <div class="container-xl bg-secondary">
+        <p>Essa é a div com classe container-xl</p>
+        <p>container-lg ocupa 100% da tela de dispositivos grandes (De 992px até 1200px)</p>
+    </div>
+
+    <div class="container-xxl bg-success">
+        <p>Essa é a div com classe container-xxl</p>
+        <p>container-lg ocupa 100% da tela de dispositivos extra-grandes (De 1200px até 1400px)</p>
+    </div>
+
+    <div class="container-fluid bg-warning">
+        <p>Essa é a div com a classe container-fluid </p>
+        <p>Conteiner-fluid ocupa 100% da largura da tela independente do seu tamanho</p>
+    </div>
 
     <script src="js/script.js"></script>
 </body>
