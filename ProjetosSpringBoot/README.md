@@ -1,2 +1,3 @@
-Projeto baseado no guia [Consuming a RESTful Web Service](https://spring.io/guides/gs/consuming-rest/) do spring.
-criação de um aplicativo que consome um serviço Web RESTful.
+# Repositório SpringBoot
+
+Este repositório contém projetos em Spring Boot. Cada projeto é uma aplicação completa com funcionalidades específicas e exemplos práticos de como usar diferentes recursos do Spring Boot.
