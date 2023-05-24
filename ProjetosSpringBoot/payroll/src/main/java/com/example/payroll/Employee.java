@@ -1,48 +1,47 @@
 package com.example.payroll;
 
-import java.io.Serializable;
 import java.util.Objects;
-
-import org.springframework.hateoas.RepresentationModel;
 
 import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.Id;
 
 @Entity
-public class Employee extends RepresentationModel<Employee> implements Serializable{
-	
+public class Employee {
+
 	@Id
 	@GeneratedValue
 	private Long id;
-	private String nome;
+	private String firstName;
+	private String lastName;
 	private String role;
-	
+
 	public Employee() {
-		
+
 	}
-	
-	public Employee(String nome, String role) {
-		this.nome = nome;
+
+	public Employee(String firstName, String lastName, String role) {
+		this.firstName = firstName;
+		this.lastName = lastName;
 		this.role = role;
 	}
-	
-	
+
 	public Long getId() {
 		return id;
 	}
-	
 
 	public void setId(Long id) {
 		this.id = id;
 	}
 
-	public String getNome() {
-		return nome;
+	public String getName() {
+		return this.firstName + " " + this.lastName;
 	}
 
-	public void setNome(String nome) {
-		this.nome = nome;
+	public void setName(String name) {
+		String[] parts = name.split(" ");
+		this.firstName = parts[0];
+		this.lastName = parts[1];
 	}
 
 	public String getRole() {
@@ -53,9 +52,25 @@ public class Employee extends RepresentationModel<Employee> implements Serializa
 		this.role = role;
 	}
 
+	public String getFirstName() {
+		return firstName;
+	}
+
+	public void setFirstName(String firstName) {
+		this.firstName = firstName;
+	}
+
+	public String getLastName() {
+		return lastName;
+	}
+
+	public void setLastName(String lastName) {
+		this.lastName = lastName;
+	}
+
 	@Override
 	public int hashCode() {
-		return Objects.hash(id, nome, role);
+		return Objects.hash(firstName, id, lastName, role);
 	}
 
 	@Override
@@ -67,11 +82,13 @@ public class Employee extends RepresentationModel<Employee> implements Serializa
 		if (getClass() != obj.getClass())
 			return false;
 		Employee other = (Employee) obj;
-		return Objects.equals(id, other.id) && Objects.equals(nome, other.nome) && Objects.equals(role, other.role);
+		return Objects.equals(firstName, other.firstName) && Objects.equals(id, other.id)
+				&& Objects.equals(lastName, other.lastName) && Objects.equals(role, other.role);
 	}
 
 	@Override
 	public String toString() {
-		return "Id: " + id + ", Nome: " + nome + ", Role: " + role;
+		return "Employee [id=" + id + ", firstName=" + firstName + ", lastName=" + lastName + ", role=" + role + "]";
 	}
+
 }
