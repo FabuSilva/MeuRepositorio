@@ -15,34 +15,32 @@ while True:
     opcao = input(menu.lower())
     
     if opcao == "d":
-        valor = float(input("Digite o valor do deposito: "))
+        valor = float(input("Digite o valor do depósito: "))
         if valor > 0:
-            saldo+=valor
-            extrato += f'Deposito de ${valor:.2f} '
+            saldo += valor
+            extrato += f'Depósito de ${valor:.2f} \n'
         else:
-            print("Error")
+            print("Erro")
     elif opcao == "s":
         valor = float(input("Digite o valor do saque: "))
-        exedeu_saldo = valor > saldo
-        exedeu_limite = valor > limite
-        exedeu_saque = numero_saque >= LIMITE_SAQUE
-        if exedeu_saldo:
-            print("Exedeu saldo")
-        elif exedeu_limite:
-            print("Exedeu limite")
-        elif exedeu_saque:
-            print("Exedeu saque")
+        excedeu_saldo = valor > saldo
+        excedeu_limite = valor > limite
+        excedeu_saque = numero_saque >= LIMITE_SAQUE 
+        if excedeu_saldo:
+            print("Excedeu saldo")
+        elif excedeu_limite:
+            print("Excedeu limite")
+        elif excedeu_saque:
+            print("Excedeu saques")
         elif valor > 0:
             saldo -= valor
-            extrato += f'Saque:${valor:.2f} '
+            extrato += f'Saque: ${valor:.2f} \n' 
             numero_saque += 1
-    elif opcao =="e":
-        print("\n==========EXTRATO==========")
+    elif opcao == "e":
+        print("\n========== EXTRATO ==========")  
         print("Não foram realizadas movimentações" if not extrato else extrato)
-        print(f'\nsaldo: ${saldo:.2}')
-    elif opcao =="q":
+        print(f'\nSaldo: ${saldo:.2f}') 
+    elif opcao == "q":
         break
     else:
-        print("Opção invalida")
-        
-    
+        print("Opção inválida") 
