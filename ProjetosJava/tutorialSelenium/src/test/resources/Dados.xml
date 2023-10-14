@@ -1,0 +1,209 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<operacoes num="0" desc="Elemento pai do xml">
+    <adicao num="0" desc="Testando a operação de somar">
+        <caso num="0" desc="Testando 2 números inteiros positivos">
+			<primeiroNumero>3</primeiroNumero>
+			<abrindoParenteses></abrindoParenteses>
+			<sinalNumero></sinalNumero>
+			<segundoNumero>b9</segundoNumero>
+			<fechandoParenteses></fechandoParenteses>
+			<resultadoEsperado>7</resultadoEsperado>
+		</caso>
+		
+        <caso num="1" desc="Testando 2 números inteiros negativos">
+			<primeiroNumero>-4</primeiroNumero>
+			<abrindoParenteses>(</abrindoParenteses>
+			<sinalNumero>-</sinalNumero>
+			<segundoNumero>b17</segundoNumero> //b17 = "1"
+			<fechandoParenteses>)</fechandoParenteses>
+			<resultadoEsperado>-5</resultadoEsperado>
+		</caso>
+		
+        <caso num="2" desc="Testando 1 número positivo e 1 negativo">
+			<primeiroNumero>4</primeiroNumero>
+			<abrindoParenteses>(</abrindoParenteses>
+			<sinalNumero>-</sinalNumero>
+			<segundoNumero>b18</segundoNumero> //b17 = "2"
+			<fechandoParenteses>)</fechandoParenteses>
+			<resultadoEsperado>2</resultadoEsperado>
+		</caso>
+		
+        <caso num="3" desc="Testando 1 número e 1 letra">
+			<primeiroNumero>a</primeiroNumero>
+			<abrindoParenteses></abrindoParenteses>
+			<sinalNumero></sinalNumero>
+			<segundoNumero>b18</segundoNumero> //b17 = "2"
+			<fechandoParenteses></fechandoParenteses>
+			<resultadoEsperado>NaN</resultadoEsperado>
+		</caso>
+		
+        <caso num="4" desc="Testando 1 número inteiro e 1 número decimal">
+			<primeiroNumero>1,5</primeiroNumero>
+			<abrindoParenteses></abrindoParenteses>
+			<sinalNumero></sinalNumero>
+			<segundoNumero>b19</segundoNumero> //b19 = "3"
+			<fechandoParenteses></fechandoParenteses>
+			<resultadoEsperado>4,5</resultadoEsperado>
+		</caso>
+    </adicao>
+
+    <subtracao num="1" desc="Testando a operação de subtração">
+		
+        <caso num="0" desc="Testando 2 números inteiros positivos">
+			<primeiroNumero>9</primeiroNumero>
+			<abrindoParenteses></abrindoParenteses>
+			<sinalNumero></sinalNumero>
+			<segundoNumero>b10</segundoNumero>
+			<fechandoParenteses></fechandoParenteses>
+			<resultadoEsperado>4</resultadoEsperado>
+		</caso>
+		
+        <caso num="1" desc="Testando 2 números inteiros negativos">
+			<primeiroNumero>-15</primeiroNumero>
+			<abrindoParenteses>(</abrindoParenteses>
+			<sinalNumero>-</sinalNumero>
+			<segundoNumero>b3</segundoNumero>
+			<fechandoParenteses>)</fechandoParenteses>
+			<resultadoEsperado>-6</resultadoEsperado>
+		</caso>
+		
+        <caso num="2" desc="Testando 1 número positivo e 1 negativo">
+			<primeiroNumero>23</primeiroNumero>
+			<abrindoParenteses>(</abrindoParenteses>
+			<sinalNumero>-</sinalNumero>
+			<segundoNumero>b1</segundoNumero>
+			<fechandoParenteses>)</fechandoParenteses>
+			<resultadoEsperado>30</resultadoEsperado>
+		</caso>
+		
+        <caso num="3" desc="Testando 1 número e 1 letra">
+			<primeiroNumero>j</primeiroNumero>
+			<abrindoParenteses></abrindoParenteses>
+			<sinalNumero></sinalNumero>
+			<segundoNumero>b10</segundoNumero>
+			<fechandoParenteses></fechandoParenteses>
+			<resultadoEsperado>-</resultadoEsperado>
+		</caso>
+		
+        <caso num="4" desc="Testando 1 número inteiro e 1 número decimal">
+			<primeiroNumero>12,23</primeiroNumero>
+			<abrindoParenteses></abrindoParenteses>
+			<sinalNumero></sinalNumero>
+			<segundoNumero>b11</segundoNumero>
+			<fechandoParenteses></fechandoParenteses>
+			<resultadoEsperado>6,23</resultadoEsperado>
+		</caso>
+    </subtracao>
+    
+    <exponecicao num="2" desc="Testando a operação de Potencia">
+        <caso num="0" desc="Testando 2 números inteiros positivos">
+			<primeiroNumero>2</primeiroNumero>
+			<segundoNumero>3</segundoNumero>
+			<resultadoEsperado>8</resultadoEsperado>
+		</caso>
+		
+        <caso num="1" desc="Testando 2 números inteiros negativos">
+			<primeiroNumero>-5</primeiroNumero>
+			<segundoNumero>-7</segundoNumero>
+			<resultadoEsperado>-0,0000128</resultadoEsperado>
+		</caso>
+		
+        <caso num="2" desc="Testando 1 número positivo e 1 negativo">
+			<primeiroNumero>-8</primeiroNumero>
+			<segundoNumero>4</segundoNumero>
+			<resultadoEsperado>4096</resultadoEsperado>
+		</caso>
+		
+        <caso num="3" desc="Testando 1 número e 1 letra">
+			<primeiroNumero>a</primeiroNumero>
+			<segundoNumero>2</segundoNumero>
+			<resultadoEsperado>NaN</resultadoEsperado>
+		</caso>
+		
+        <caso num="4" desc="Testando 1 número inteiro e 1 número decimal">
+			<primeiroNumero>4</primeiroNumero>
+			<segundoNumero>1,3</segundoNumero>
+			<resultadoEsperado>6,062866266041593</resultadoEsperado>
+		</caso>
+    </exponecicao>
+    
+    <multiplicacao num="3" desc="Testando a operação de multiplicar">
+        <caso num="0" desc="Testando 2 números inteiros positivos">
+			<sinalNumero></sinalNumero>
+			<primeiroDigitoNumero>b25</primeiroDigitoNumero>
+			<segundoDigitoNumero>b2</segundoDigitoNumero> 
+			<segundoNumero>5</segundoNumero>
+			<resultadoEsperado>40</resultadoEsperado>
+		</caso>
+		
+        <caso num="1" desc="Testando 2 números inteiros negativos">
+			<sinalNumero>-</sinalNumero>
+			<primeiroDigitoNumero>b17</primeiroDigitoNumero>
+			<segundoDigitoNumero>b10</segundoDigitoNumero>
+			<segundoNumero>(-10)</segundoNumero>
+			<resultadoEsperado>150</resultadoEsperado>
+		</caso>
+		
+        <caso num="2" desc="Testando 1 número positivo e 1 negativo">
+			<sinalNumero>-</sinalNumero>
+			<primeiroDigitoNumero>b18</primeiroDigitoNumero>
+			<segundoDigitoNumero>b11</segundoDigitoNumero>
+			<segundoNumero>3</segundoNumero>
+			<resultadoEsperado>-78</resultadoEsperado>
+		</caso>
+		
+        <caso num="3" desc="Testando 1 número e 1 letra">
+			<sinalNumero></sinalNumero>
+			<primeiroDigitoNumero>b25</primeiroDigitoNumero>
+			<segundoDigitoNumero>b25</segundoDigitoNumero>
+			<segundoNumero>a</segundoNumero>
+			<resultadoEsperado>NaN</resultadoEsperado>
+		</caso>
+		
+        <caso num="4" desc="Testando 1 número inteiro e 1 número decimal">
+			<sinalNumero></sinalNumero>
+			<primeiroDigitoNumero>b9</primeiroDigitoNumero>
+			<segundoDigitoNumero>b1</segundoDigitoNumero> 
+			<segundoNumero>7,9</segundoNumero>
+			<resultadoEsperado>371,3</resultadoEsperado>
+		</caso>
+    </multiplicacao>
+    
+    <divisao num="1" desc="Testando a operação de dividir">
+        <caso num="0" desc="Testando 2 números inteiros positivos">
+			<sinalNumero></sinalNumero>
+			<primeiroDigitoNumero>b1</primeiroDigitoNumero>
+			<segundoDigitoNumero>b25</segundoDigitoNumero> 
+			<segundoNumero>2</segundoNumero>
+			<resultadoEsperado>35</resultadoEsperado>
+		</caso>
+        <caso num="1" desc="Testando 2 números inteiros negativos">
+			<sinalNumero>-</sinalNumero>
+			<primeiroDigitoNumero>b25</primeiroDigitoNumero>
+			<segundoDigitoNumero>b11</segundoDigitoNumero> 
+			<segundoNumero>(-3)</segundoNumero>
+			<resultadoEsperado>2</resultadoEsperado>
+		</caso>
+        <caso num="2" desc="Testando 1 número positivo e 1 negativo">
+			<sinalNumero>-</sinalNumero>
+			<primeiroDigitoNumero>b3</primeiroDigitoNumero>
+			<segundoDigitoNumero>b3</segundoDigitoNumero> 
+			<segundoNumero>6</segundoNumero>
+			<resultadoEsperado>-16,5</resultadoEsperado>
+		</caso>
+        <caso num="3" desc="Testando 1 número e 1 letra">
+			<sinalNumero></sinalNumero>
+			<primeiroDigitoNumero>b1</primeiroDigitoNumero>
+			<segundoDigitoNumero>b25</segundoDigitoNumero>
+			<segundoNumero>x</segundoNumero>
+			<resultadoEsperado>-</resultadoEsperado>
+		</caso>
+        <caso num="4" desc="Testando 1 número inteiro e 1 número decimal">
+			<sinalNumero></sinalNumero>
+			<primeiroDigitoNumero>b2</primeiroDigitoNumero>
+			<segundoDigitoNumero>b19</segundoDigitoNumero> 
+			<segundoNumero>5,5</segundoNumero>
+			<resultadoEsperado>15,090909090909092</resultadoEsperado>
+		</caso>
+    </divisao>
+</operacoes>

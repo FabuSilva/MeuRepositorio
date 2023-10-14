@@ -1,0 +1,106 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema">
+	<xs:element name="operacoes">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element name="adicao">
+					<xs:complexType>
+						<xs:sequence>
+							<xs:element name="caso" maxOccurs="unbounded">
+								<xs:complexType mixed="true">
+									<xs:sequence>
+										<xs:element name="primeiroNumero" type="xs:string" />
+										<xs:element name="operacao" type="xs:string" />
+										<xs:element name="abrindoParenteses" type="xs:string" />
+										<xs:element name="sinalNumero" type="xs:string" />
+										<xs:element name="segundoNumero" type="xs:string" />
+										<xs:element name="fechandoParenteses" type="xs:string" />
+										<xs:element name="igualdade" type="xs:string" />
+										<xs:element name="resultadoEsperado" type="xs:string" />
+									</xs:sequence>
+									<xs:attribute name="num" type="xs:integer" use="required" />
+									<xs:attribute name="desc" use="required" />
+								</xs:complexType>
+							</xs:element>
+						</xs:sequence>
+						<xs:attribute name="num" type="xs:integer" use="required" />
+						<xs:attribute name="desc" use="required" />
+					</xs:complexType>
+				</xs:element>
+				<xs:element name="subtracao">
+					<xs:complexType>
+						<xs:sequence>
+							<xs:element name="caso" maxOccurs="unbounded">
+								<xs:complexType mixed="true">
+									<xs:sequence>
+										<xs:element name="primeiroNumero" type="xs:string" />
+										<xs:element name="operacao" type="xs:string" />
+										<xs:element name="abrindoParenteses" type="xs:string" />
+										<xs:element name="sinalNumero" type="xs:string" />
+										<xs:element name="segundoNumero" type="xs:string" />
+										<xs:element name="fechandoParenteses" type="xs:string" />
+										<xs:element name="igualdade" type="xs:string" />
+										<xs:element name="resultadoEsperado" type="xs:string" />
+									</xs:sequence>
+									<xs:attribute name="num" type="xs:integer" use="required" />
+									<xs:attribute name="desc" use="required" />
+								</xs:complexType>
+							</xs:element>
+						</xs:sequence>
+						<xs:attribute name="num" type="xs:integer" use="required" />
+						<xs:attribute name="desc" use="required" />
+					</xs:complexType>
+				</xs:element>
+				<xs:element name="exponecicao">
+					<xs:complexType>
+						<xs:sequence>
+							<xs:element name="caso" maxOccurs="unbounded">
+								<xs:complexType mixed="true">
+									<xs:sequence>
+										<xs:element name="xn" type="xs:string" />
+										<xs:element name="primeiroNumero" type="xs:string" />
+										<xs:element name="segundoNumero" type="xs:string" />
+										<xs:element name="botaoCalculo" type="xs:string" />
+										<xs:element name="resultadoEsperado" type="xs:string" />
+									</xs:sequence>
+									<xs:attribute name="num" type="xs:integer" use="required" />
+									<xs:attribute name="desc" use="required" />
+								</xs:complexType>
+							</xs:element>
+						</xs:sequence>
+						<xs:attribute name="num" type="xs:integer" use="required" />
+						<xs:attribute name="desc" use="required" />
+					</xs:complexType>
+				</xs:element>
+				<xs:element name="multiplicacao">
+					<xs:complexType>
+						<xs:sequence>
+							<xs:element name="caso" maxOccurs="unbounded">
+								<xs:complexType>
+									<xs:attribute name="num" type="xs:integer" use="required" />
+									<xs:attribute name="desc" use="required" />
+								</xs:complexType>
+							</xs:element>
+						</xs:sequence>
+						<xs:attribute name="num" type="xs:integer" use="required" />
+						<xs:attribute name="desc" use="required" />
+					</xs:complexType>
+				</xs:element>
+				<xs:element name="divisao">
+					<xs:complexType>
+						<xs:sequence>
+							<xs:element name="caso" maxOccurs="unbounded">
+								<xs:complexType>
+									<xs:attribute name="num" type="xs:integer" use="required" />
+									<xs:attribute name="desc" use="required" />
+								</xs:complexType>
+							</xs:element>
+						</xs:sequence>
+						<xs:attribute name="num" type="xs:integer" use="required" />
+						<xs:attribute name="desc" use="required" />
+					</xs:complexType>
+				</xs:element>
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+</xs:schema>
